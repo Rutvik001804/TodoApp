@@ -194,3 +194,18 @@ function addTask() {
     }
     document.getElementById('new-task').focus();
 }
+
+// Delete Task From Todo
+function deleteTask(dlt) {
+    var index = document.getElementById(dlt.id);
+    index = index.id;
+    var last = index.toString().split('btnDelete', 2);
+    
+    todo.splice(last[1],1);
+
+    display(this.todo, this.completedTodo);
+    
+    document.getElementById("filter-task").selectedIndex = 0;
+    console.log("Task Permanently Deleted From Todo");
+    console.log(todo);
+}
