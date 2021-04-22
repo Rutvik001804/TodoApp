@@ -224,3 +224,17 @@ function completedTask(ele) {
     console.log("Task Go To Completed");
     console.log(completedTodo);
 }
+
+// Delete Task From Completed Task
+function removeTask(dlt) {
+    var index = document.getElementById(dlt.id);
+    index = index.id;
+    var last = index.toString().split('deleteBtn', 2);
+    
+    completedTodo.splice(last[1],1);
+
+    display(this.todo, this.completedTodo);
+
+    console.log("Task Permanently Deleted From Completed Task");
+    console.log(completedTodo);
+}
