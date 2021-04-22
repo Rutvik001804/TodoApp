@@ -13,6 +13,37 @@
 <body onload="display(this.todo, this.completedTodo)">
     <div class="container">
         <h1>Todo App</h1>
+        <!-- Add Task Modal -->
+        <div id="myModal1" class="modal1">
+            <div class="modal-content1">
+                <div class="modal-header1">
+                  <span class="close1">&times;</span>
+                  <h2>Add Task</h2>
+                </div>
+                <div class="modal-body1">
+                  <form id="myForm1" onsubmit="addTask(); return false;">
+                    <div id="add-newtitle">
+                        <p>Title : </p>
+                        <div class="select1">
+                            <select id="new-title">
+                                <option value="" disabled selected>Select Your Option</option>
+                                <option value="Shopping List">Shopping List</option>
+                                <option value="Office Work">Office Work</option>
+                                <option value="Other">Other</option>
+                            </select>
+                        </div>
+                    </div>
+                    <p id="add-newtask">Task : 
+                        <input id="new-task" type="text" placeholder="Add Task Here" onkeypress="check(this)">
+                    </p>
+                  </form>
+                </div>
+                <div class="modal-footer1">
+                    <input type="button" id="btnSubmit1" value="Add" onclick="addTask()">
+                </div>
+            </div>
+        </div>
+
         <hr />
         <!-- Add New Task Button -->
         <div class="add-task">

@@ -106,3 +106,54 @@ function display(todo,completedTodo) {
         }
     }
 }
+
+// Open Modal For Add New Task
+function addNewTask() {
+    document.getElementById('new-task').focus();
+
+    var modal = document.getElementById("myModal1");
+
+    var span = document.getElementsByClassName("close1")[0];
+
+    document.getElementById('new-title').value = '';
+    document.getElementById('new-task').value = '';
+    
+    modal.style.display = "block";
+
+    span.onclick = () => {
+        modal.style.display = "none";
+    }
+
+    window.onclick = (event) => {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+    }
+    document.addEventListener('keydown', (event) => {
+        if (event.key === 'Escape') {
+            modal.style.display = "none";
+        }
+    });
+}
+
+// For Add New Task in Todo
+function addTask() {
+    var modal = document.getElementById("myModal1");
+    modal.style.display = "block";
+
+    var newTitle = document.getElementById('new-title').value;
+    var newTask = document.getElementById('new-task').value;
+
+        todo.push([newTitle, newTask]);
+
+        var a = document.getElementById('toast');
+
+        document.getElementById('new-title').value = '';
+        document.getElementById('new-task').value = '';
+
+        modal.style.display = "none";
+
+        display(this.todo, this.completedTodo);
+
+    document.getElementById('new-task').focus();
+}
