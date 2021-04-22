@@ -11,3 +11,48 @@ body {
     padding: 10px;
     border-radius: 30px;
 }
+
+h1 {
+    text-align: center;
+}
+
+hr {
+    border: 1px solid black;
+}
+
+/* ul tag for Todo Task, ul tag for Completed Task */
+.remaining-tasks, .completed-tasks{
+    list-style-type: none;
+    padding-left: 5px;
+}
+
+/* Delete, Completed, Incompleted and Edit Button */
+.delete, .completed, .incompleted, .edit {
+    padding: 10px;
+    border: none;
+    background: none;
+    font-size: 2.1em;
+    cursor: pointer;
+}
+
+/* div tag for particular Todo Task, div tag for particular Completed Task */
+.info-todo, .info-completed {
+    display: flex;
+    flex-direction: row;
+    box-shadow: 5px 5px 5px #dcdcdc;
+    margin-bottom: 15px;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: #fff;
+}
+
+/* li tag for Todo Task, li tag for Completed Task, Message for when no data in Todo Task, Message fowhen do data in Completed Task */
+.list-todo, .list-completed, .no-todo-task, .no-completed-task {
+    width: 400px;
+    word-wrap: break-word;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    font-size: 1.2em;
+    overflow: auto;
+}
