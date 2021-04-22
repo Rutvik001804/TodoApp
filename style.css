@@ -20,8 +20,8 @@ hr {
     border: 1px solid black;
 }
 
-/* Add New Task */
-#btnSubmit {
+/* Add New Task, Add Task From Modal Submit Button */
+#btnSubmit, #btnSubmit1 {
     margin: auto;
     display: block;
     padding: 2px;
@@ -33,6 +33,18 @@ hr {
     border: none;
     border-radius: 10px;
     background-color: #497BE8;
+}
+
+/* Add Task From Modal Submit Button */
+#btnSubmit1 {
+    width: 30%;
+    background-color: #fff;
+}
+
+#btnSubmit:active, #btnSubmit1:active {
+    background-color: #497BE8;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
 }
 
 /* ul tag for Todo Task, ul tag for Completed Task */
@@ -147,4 +159,87 @@ hr {
     border-radius: 0px 0px 20px 20px;
     padding-top: 10px;
     padding-bottom: 10px;
+}
+
+/* Add Title Field */
+#add-newtitle {
+    display: flex;
+    flex-direction: row;
+}
+
+/* For select tag */
+select {
+    appearance: none;
+    outline: 0;
+    box-shadow: none;
+    border: 0;
+    background: #497BE8;
+    background-image: none;
+    flex: 1;
+    padding: 0 0.5em;
+    color: #000;
+    cursor: pointer;
+}
+
+select::-ms-expand {
+    display: none;
+}
+
+/* Add New Task Dropdown Menu */
+.select1 {
+    position: relative;
+    display: flex;
+    width: 12em;
+    height: 2em;
+    background: #497BE8;
+    font-size: 1.05em;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-top: 10px;
+    margin-left: 5px;
+}
+
+/* For option tag */
+option {
+    background: #fff;
+}
+
+.select1::after {
+    content: '\25BC';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    padding: 0.5em 0.5em 0.5em 0.5em;
+    background: #497BE8;
+    cursor: pointer;
+    pointer-events: none;
+}
+
+.select1:hover::after {
+    color: #f39c12;
+}
+
+/* Add Task Dropdown Menu */
+#new-title {
+    width: 40%;
+    padding: 2px;
+    border: 0;
+    border-radius: 3px;
+    font-size: 1em;
+    margin-bottom: 3px; 
+}
+
+/* Input Tag for Add New Task */
+#new-task {
+    width: 37%;
+    padding: 2px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    font-size: 1.1em;
+    margin-bottom: 3px;
+    outline: 0;
+    border-width: 0 0 2px;
+    border-color: #497BE8;
+    margin-left: 5px;
 }
