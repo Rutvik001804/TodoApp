@@ -8,7 +8,32 @@
     <link rel="stylesheet" href="style.css">
     <script src="main.js"></script>
 </head>
-<body>
-    
+<body onload="display(this.todo, this.completedTodo)">
+    <div class="container">
+        <h1>Todo App</h1>
+        <hr />
+        <!-- Add New Task Button -->
+        <div class="add-task">
+            <button onclick="addNewTask()" id="btnSubmit">
+                Add New Task</button>
+        </div>
+
+        <!-- View of Todo Task -->
+        <div class="todo-task">
+            <h3>Todo Task</h3>
+            <hr />
+            <ul class="remaining-tasks" id="remaining-tasks"></ul>
+            
+        </div>
+
+        <!-- View of Completed Task -->
+        <div class="completed-task">
+            <h3>Completed Task</h3>
+            <hr />
+            <ul class="completed-tasks" id="completed-tasks"></ul>
+            
+        </div>
+
+    </div>
 </body>
 </html>

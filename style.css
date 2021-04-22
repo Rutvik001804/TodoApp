@@ -1,0 +1,13 @@
+body {
+    background-color: #FFDEAD;
+}
+
+.container {
+    display: block;
+    margin: 20px auto 0;
+    width: 500px;
+    border: 1px solid;
+    background-color: #fffff8;
+    padding: 10px;
+    border-radius: 30px;
+}
