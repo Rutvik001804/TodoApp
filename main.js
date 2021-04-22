@@ -26,25 +26,33 @@ function display(todo,completedTodo) {
             var elem = document.createElement("li");
             elem.setAttribute("class", "list-todo");
     
+            var itag1 = document.createElement('i');
+            itag1.setAttribute("class", "fa fa-trash");
+            var itag2 = document.createElement('i');
+            itag2.setAttribute("class", "fa fa-square-o");
+            var itag3 = document.createElement('i');
+            itag3.setAttribute("class", "fa fa-edit");
+    
             var btnDelete = document.createElement("button");
             btnDelete.setAttribute("class", "delete");
             btnDelete.setAttribute("id","btnDelete"+i);
             btnDelete.setAttribute("onclick", "deleteTask(this)");
-            btnDelete.innerHTML = "Delete";
     
             var btnComplete = document.createElement("button");
             btnComplete.setAttribute("class", "completed");
             btnComplete.setAttribute("id","btncompleted"+i);
             btnComplete.setAttribute("onclick", "completedTask(this)");
-            btnComplete.innerHTML = "Completed"
     
             var btnEdit = document.createElement("button");
             btnEdit.setAttribute("class", "edit");
             btnEdit.setAttribute("id","btnEdit"+i);
-            btnEdit.setAttribute("onclick", "editTask(this)");
-            btnEdit.innerHTML = "Edit"        
+            btnEdit.setAttribute("onclick", "editTask(this)");        
             
             elem.innerHTML= todo[i][1];
+    
+            btnDelete.appendChild(itag1);
+            btnComplete.appendChild(itag2);
+            btnEdit.appendChild(itag3);
     
             divele.appendChild(btnComplete);
             divele.appendChild(elem);
@@ -69,20 +77,26 @@ function display(todo,completedTodo) {
     
             var elem = document.createElement("li");
             elem.setAttribute("class", "list-completed");
+    
+            var itag1 = document.createElement('i');
+            itag1.setAttribute("class", "fa fa-trash");
+            var itag2 = document.createElement('i');
+            itag2.setAttribute("class", "fa fa-check-square-o");
             
             var btnDelete = document.createElement("button");
             btnDelete.setAttribute("class", "delete");
             btnDelete.setAttribute("id","deleteBtn"+j);
             btnDelete.setAttribute("onclick", "removeTask(this)");
-            btnDelete.innerHTML = "Delete";
     
             var btnIncomplete = document.createElement("button");
             btnIncomplete.setAttribute("class", "incompleted");
             btnIncomplete.setAttribute("id","btnincompleted"+j);
             btnIncomplete.setAttribute("onclick", "incompletedTask(this)");
-            btnIncomplete.innerHTML = "Incompleted";
             
             elem.innerHTML= completedTodo[j][1];
+    
+            btnDelete.appendChild(itag1);
+            btnIncomplete.appendChild(itag2);
     
             divele.appendChild(btnIncomplete);
             divele.appendChild(elem);
