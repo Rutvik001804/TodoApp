@@ -243,3 +243,8 @@ option {
     border-color: #497BE8;
     margin-left: 5px;
 }
+
+/* Valiation Message for Add New Task Tile, Task Modal*/
+#validation_error_title1, #validation_error_task1 {
+    color: red;
+}

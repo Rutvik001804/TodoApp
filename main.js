@@ -107,13 +107,32 @@ function display(todo,completedTodo) {
     }
 }
 
+// Input text length increase when text is long
+function check(len) {
+    if(len.value.length < 40) len.style.width = ((len.value.length + 1) * 8) + 'px';
+}
+
+document.getElementById('myForm1').onsubmit = () => {
+    addTask();
+    return false;
+};
+
 // Open Modal For Add New Task
 function addNewTask() {
     document.getElementById('new-task').focus();
 
     var modal = document.getElementById("myModal1");
 
+    var inp = document.getElementById('new-task');
+    inp.style.width = ((inp.getAttribute('placeholder').length + 1) * 10) + 'px';
+
     var span = document.getElementsByClassName("close1")[0];
+
+    var validate_title = document.getElementById('validation_error_title1');
+    var validate_task = document.getElementById('validation_error_task1');
+
+    validate_title.innerHTML = '';
+    validate_task.innerHTML = '';
 
     document.getElementById('new-title').value = '';
     document.getElementById('new-task').value = '';
@@ -143,17 +162,35 @@ function addTask() {
 
     var newTitle = document.getElementById('new-title').value;
     var newTask = document.getElementById('new-task').value;
+    var validate_title = document.getElementById('validation_error_title1');
+    var validate_task = document.getElementById('validation_error_task1');
 
+    validate_title.innerHTML = '';
+    validate_task.innerHTML = '';
+
+    var inp = document.getElementById('new-task');
+    inp.style.width = ((inp.getAttribute('placeholder').length + 1) * 10) + 'px';
+
+    if(newTitle == '') {
+        validate_title.innerHTML = "Please select title";
+    }
+    if(newTask.trim().length == 0) {
+        validate_task.innerHTML = "Please write task to add todo";
+    }
+    if(newTitle != '' && newTask.trim().length != 0) {
+        validate_title.innerHTML = '';
+        validate_task.innerHTML = '';
         todo.push([newTitle, newTask]);
 
         var a = document.getElementById('toast');
+        
+        display(this.todo, this.completedTodo);
 
         document.getElementById('new-title').value = '';
         document.getElementById('new-task').value = '';
 
         modal.style.display = "none";
 
-        display(this.todo, this.completedTodo);
-
+    }
     document.getElementById('new-task').focus();
 }
