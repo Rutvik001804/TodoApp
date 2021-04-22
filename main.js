@@ -238,3 +238,18 @@ function removeTask(dlt) {
     console.log("Task Permanently Deleted From Completed Task");
     console.log(completedTodo);
 }
+
+// Task Go To Completed to Todo Task
+function incompletedTask(ele) {
+    var index = document.getElementById(ele.id);
+    index = index.id;
+    var last = index.toString().split('btnincompleted', 2);
+    
+    todo.push(completedTodo[last[1]]);
+    completedTodo.splice(last[1],1);
+
+    display(this.todo, this.completedTodo);
+    
+    console.log("Task Back To Go Todo");
+    console.log(completedTodo);
+}
