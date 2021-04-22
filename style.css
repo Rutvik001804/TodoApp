@@ -20,6 +20,21 @@ hr {
     border: 1px solid black;
 }
 
+/* Add New Task */
+#btnSubmit {
+    margin: auto;
+    display: block;
+    padding: 2px;
+    text-align: center;
+    font-size: 1.1em;
+    width: 75%;
+    height: 50px;
+    cursor: pointer;
+    border: none;
+    border-radius: 10px;
+    background-color: #497BE8;
+}
+
 /* ul tag for Todo Task, ul tag for Completed Task */
 .remaining-tasks, .completed-tasks{
     list-style-type: none;
@@ -55,4 +70,80 @@ hr {
     align-items: center;
     font-size: 1.2em;
     overflow: auto;
+}
+
+/* Add New Task Modal */
+.modal1 {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    overflow: auto; 
+    background-color: rgb(0,0,0); 
+    background-color: rgba(0,0,0,0.4);
+}
+
+/* Add New Task Content */
+.modal-content1 {
+    position: relative;
+    background-color: #fefefe;
+    margin: auto;
+    padding: 0;
+    border: 1px solid #888;
+    width: 30%;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+    -webkit-animation-name: animatetop;
+    -webkit-animation-duration: 0.4s;
+    animation-name: animatetop;
+    animation-duration: 0.4s
+}
+  
+@-webkit-keyframes animatetop {
+    from {top:-300px; opacity:0} 
+    to {top:0; opacity:1}
+}
+  
+@keyframes animatetop {
+    from {top:-300px; opacity:0}
+    to {top:0; opacity:1}
+}
+
+/* Close Button for Add New Task */
+.close1 {
+    color: white;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+  
+.close1:hover, .close1:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Modal Header for Add New Task */
+.modal-header1 {
+    padding: 2px 16px;
+    background-color: #497BE8;
+    color: black;
+    border-radius: 20px 20px 0px 0px;
+}
+  
+/* Modal Body for Add New Task */
+.modal-body1 {
+    padding: 2px 16px;
+}
+
+/* Modal Footer for Add New Task */
+.modal-footer1 {
+    background-color: #497BE8;
+    color: black;
+    border-radius: 0px 0px 20px 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
 }
