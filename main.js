@@ -247,7 +247,7 @@ function incompletedTask(ele) {
     
     todo.push(completedTodo[last[1]]);
     completedTodo.splice(last[1],1);
-
+    
     display(this.todo, this.completedTodo);
     
     console.log("Task Back To Go Todo");
