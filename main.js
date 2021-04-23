@@ -416,9 +416,6 @@ function editmyTask() {
     var validate_title = document.getElementById('validation_error_title');
     var validate_task = document.getElementById('validation_error_task');
 
-    var inp = document.getElementById('new-task');
-    inp.style.width = ((inp.getAttribute('placeholder').length + 1) * 10) + 'px';
-
     validate_title.innerHTML = '';
     validate_task.innerHTML = '';
 
