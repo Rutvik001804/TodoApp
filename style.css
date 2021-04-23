@@ -408,6 +408,12 @@ option {
     display: none;
 }
 
+/* For Placeholder */
+::placeholder {
+    color: #000;
+    opacity: 0.5;
+}
+
 /* For Toast Message */
 #toast {
     visibility: hidden;
