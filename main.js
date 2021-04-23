@@ -1,7 +1,7 @@
 // Todo Task Array
-var todo = [['Other', 'Do Workout'], ['Office Work', 'Do Coding']];
+var todo = [];
 // Completed Task Array
-var completedTodo = [['Other', 'Study']];
+var completedTodo = [];
 
 // Display Todo and Completed Task
 function display(todo,completedTodo) {
@@ -249,7 +249,7 @@ function addTask() {
     if(newTitle != '' && newTask.trim().length != 0) {
         validate_title.innerHTML = '';
         validate_task.innerHTML = '';
-        todo.push([newTitle, newTask]);
+        todo.push([newTitle, newTask.trim()]);
 
         var a = document.getElementById('toast');
         
