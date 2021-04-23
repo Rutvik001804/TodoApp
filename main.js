@@ -8,8 +8,15 @@ function display(todo,completedTodo) {
     var list = document.getElementById('remaining-tasks');
     var listCompleted = document.getElementById('completed-tasks');
 
+    document.getElementById('new-title').value = '';
+    document.getElementById('new-task').value = '';
+    document.getElementById('myInput1').value = '';
     list.innerHTML = '';
     listCompleted.innerHTML = '';
+
+    document.getElementById("filter-task").selectedIndex = 0;
+    document.getElementById("search-todo-msg").style.display = "none";
+    document.getElementById("search-completed-msg").style.display = "none";
     
     if(todo.length == 0) {
         var elem = document.createElement("li");
@@ -105,6 +112,68 @@ function display(todo,completedTodo) {
             listCompleted.appendChild(divele);
         }
     }
+}
+
+// For Search and Filter
+function searchFilter() {
+    var list = document.getElementById('remaining-tasks');
+    var divele_todo = list.getElementsByClassName("info-todo");
+    var li_todo = list.getElementsByClassName("list-todo");
+    var emt_todo = document.getElementById("search-todo-msg");
+
+    var filter = document.getElementById('filter-task').value;
+
+    var listCompleted = document.getElementById('completed-tasks');
+    var divele_completed = listCompleted.getElementsByClassName("info-completed");
+    var li_completed = listCompleted.getElementsByClassName("list-completed");
+    var emt_completed = document.getElementById("search-completed-msg");
+
+    var value = document.getElementById("myInput1").value.toLowerCase().trim();
+
+    let counter_todo = li_todo.length;
+    let counter_completed  = li_completed.length;
+
+    if(li_todo.length == 0) {
+        emt_todo.style.display = "block";
+        document.getElementById('no-todo-task').style.display = "none";
+    }
+    else {
+        for(let i=0; i<li_todo.length; i++) {
+            let txt = li_todo[i].textContent || li_todo[i].innerText;
+            if (txt.toLowerCase().indexOf(value) > -1 && (filter == 'All Task' || todo[i][0] == filter)) {
+                divele_todo[i].style.display = "";
+            } else {
+                divele_todo[i].style.display = "none";
+                counter_todo--;
+            }
+        }
+    }
+
+    if(li_completed.length == 0) {
+        emt_completed.style.display = "block";
+        document.getElementById('no-completed-task').style.display = "none";
+    }
+    else {
+        for(let i=0; i<li_completed.length; i++) {
+            let txt = li_completed[i].textContent || li_completed[i].innerText;
+            if (txt.toLowerCase().indexOf(value) > -1 && (filter == 'All Task' || completedTodo[i][0] == filter)) {
+                divele_completed[i].style.display = "";
+            } else {
+                divele_completed[i].style.display = "none";
+                counter_completed--;
+            }
+        }
+    }
+   
+    if(counter_todo == 0) 
+        emt_todo.style.display = "block";
+    else 
+        emt_todo.style.display = "none";
+
+    if(counter_completed == 0) 
+        emt_completed.style.display = "block";
+    else 
+        emt_completed.style.display = "none";
 }
 
 // Input text length increase when text is long

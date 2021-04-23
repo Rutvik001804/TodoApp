@@ -53,12 +53,29 @@
                 Add New Task</button>
         </div>
 
+        <!-- Search and Filter -->
+        <div class="search-and-filter">
+            <div class="icon-search">
+                <span class="fa fa-search icon-srch"></span>
+                <input class="Search Here" id="myInput1" onkeyup="searchFilter()" type="text" placeholder="Search">
+            </div>
+            <div class="select">
+                <select id="filter-task" onchange="searchFilter()">
+                    <option value="All Task" selected>All Task</option>
+                    <option value="Shopping List">Shopping List</option>
+                    <option value="Office Work">Office Work</option>
+                    <option value="Other">Other</option>
+                </select>
+            </div>
+        </div>
+
         <!-- View of Todo Task -->
         <div class="todo-task">
             <h3>Todo Task</h3>
             <hr />
             <ul class="remaining-tasks" id="remaining-tasks"></ul>
-            
+            <p id="search-todo-msg">Search Task Not Found</p>
+            <p id="filter-todo-msg">No Tasks. Add Some Tasks</p>
         </div>
 
         <!-- View of Completed Task -->
@@ -66,7 +83,8 @@
             <h3>Completed Task</h3>
             <hr />
             <ul class="completed-tasks" id="completed-tasks"></ul>
-            
+            <p id="search-completed-msg">Search Task Not Found</p>
+            <p id="filter-completed-msg">No Completed Tasks</p>
         </div>
 
         <!-- Edit Task Modal -->

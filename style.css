@@ -96,6 +96,42 @@ hr {
     overflow: auto;
 }
 
+/* div tag for Search and Filter */
+.search-and-filter {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-left: 60px;
+    margin-right: 60px;
+    margin-top: 10px;
+}
+
+/* For Searchbar */
+.icon-search {
+    position: relative;
+    align-content: center;
+}
+
+/* For Search Icon */
+.icon-srch { 
+    position: absolute; 
+    left: 20px;
+    top: 8px; 
+    font-size: 1.3em;
+}
+
+/* Searchbar Text */
+#myInput1 {
+    width: 140px;
+    height: 30px;
+    padding: 2px;
+    padding-left: 50px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    font-size: 1.1em;
+    background-color: #497BE8;
+}
+
 /* Edit Task Modal, Add New Task Modal */
 .modal, .modal1 {
     display: none;
@@ -250,14 +286,27 @@ option {
     color: #f39c12;
 }
 
-/* Add Task and Edit Task Dropdown Menu */
-#new-title, #edit-newtitle {
-    width: 40%;
+/* Add Task, Filter Task and Edit Task Dropdown Menu */
+#new-title, #filter-task, #edit-newtitle {
+    width: 27%;
     padding: 2px;
-    border: 0;
+    border: 1px solid #ccc;
     border-radius: 3px;
     font-size: 1em;
     margin-bottom: 3px; 
+}
+
+/* Filter Task Dropdown Menu */
+#filter-task {
+    width: 10em;
+    outline: 0;
+    border: 0;
+}
+
+/* Add Task Dropdown Menu */
+#new-title, #edit-newtitle {
+    width: 40%;
+    border: 0;
 }
 
 /* Input Tag for Add New Task */
@@ -289,5 +338,14 @@ option {
 
 /* Validation Message for Edit Task Title, Task Modal and Valiation Message for Add New Task Tile, Task Modal*/
 #validation_error_title, #validation_error_task, #validation_error_title1, #validation_error_task1 {
+    color: red;
+}
+
+/* Message for when do data available in Todo Task, Completed Task using Searchbar and
+   Message for when do data available in Todo Task, Completed Task using Filter */
+   #search-todo-msg, #search-completed-msg, #filter-todo-msg, #filter-completed-msg {
+    font-size: 1.1em;
+    text-align: center;
+    display: none;
     color: red;
 }
