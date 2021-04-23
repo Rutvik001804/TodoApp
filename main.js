@@ -446,3 +446,16 @@ function editmyTask() {
     }
     document.getElementById('edit-newtask').focus();
 }
+
+// Submit Feedback and Show Toast Message
+function submitFeedback() {
+    var feedback = document.getElementById('feedback');
+    feedback.style.display = "none";
+
+    var a = document.getElementById('toast');
+    a.className = 'show';
+    setTimeout(() => { 
+        a.className = a.className.replace('show','');
+    }, 3000);
+    a.innerHTML = "Thank You For Feedback Us";
+}
