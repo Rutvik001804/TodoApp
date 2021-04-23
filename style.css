@@ -576,4 +576,9 @@ option {
         padding-left: 40px;
         margin-bottom: 10px;
     }
+
+    /* Edit Task Modal Content, Add New Task Content */
+    .modal-content, .modal-content1 {
+        width: 80%;
+    }
 }
