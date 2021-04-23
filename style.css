@@ -588,4 +588,9 @@ option {
         padding: 10px;
         border-radius: 10px;
     }
+
+    /* Delete, Completed, Incompleted and Edit Button */
+    .delete, .completed, .incompleted, .edit {
+        font-size: 2em;
+    }
 }
