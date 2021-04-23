@@ -444,3 +444,19 @@ option {
     from {bottom: 30px; opacity: 1;}
     to {bottom: 0; opacity: 0;}
 }
+
+/* Media Query for Responsive */
+@media only screen and (max-width: 600px) {
+    body {
+        background-color: #FFDEAD;
+    }
+
+    .container {
+        display: block;
+        margin: 20px auto 0;
+        width: 300px;
+        border: 1px solid black;
+        background-color: #FFFAFA;
+        padding: 10px;
+    }
+}
