@@ -380,19 +380,27 @@ option {
 .rating-and-button {
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
 }
 
-/* Submit Button for Feedback */
-#submit-feedback {
+/* Feedback Buttons */
+.feedback-buttons {
+    display: flex;
+    flex-direction: row;
+}
+
+/* Submit and Cancel Button for Feedback */
+#submit-feedback, #cancel-feedback {
     padding: 2px;
     text-align: center;
     font-size: 1.1em;
-    width: 25%;
+    width: 30%;
     cursor: pointer;
     border: none;
     border-radius: 10px;
-    margin-left: 200px;
+    margin-left: 30px;
     background-color: #497BE8;
+    display: none;
 }
 
 /* For Toast Message */

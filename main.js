@@ -459,3 +459,33 @@ function submitFeedback() {
     }, 3000);
     a.innerHTML = "Thank You For Feedback Us";
 }
+
+// Cancel Feedback and Show Toast Message
+function cancelFeedback() {
+    var a = document.getElementById('toast');
+    a.className = 'show';
+    setTimeout(() => { 
+        a.className = a.className.replace('show','');
+    }, 3000);
+    a.innerHTML = "Feedback Cancel";
+
+    var submit = document.getElementById('submit-feedback');
+    var cancel = document.getElementById('cancel-feedback');
+
+    submit.style.display = "none";
+    cancel.style.display = "none";
+}
+
+// Show Submit and Cancel Button Feedback
+function showButton() {
+    var submit = document.getElementById('submit-feedback');
+    var cancel = document.getElementById('cancel-feedback');
+
+    submit.style.display = "block";
+    cancel.style.display = "block";
+    
+    setTimeout(() => {
+        submit.style.display = "none";
+        cancel.style.display = "none";
+    }, 5000);
+}

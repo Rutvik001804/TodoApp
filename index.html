@@ -129,26 +129,27 @@
             <hr />
             <div class="rating-and-button">
                 <div class="star-rating" id="star-rating">
-                    <input id="star-5" type="radio" name="rating" value="star-5" onclick="openButton()" />
+                    <input id="star-5" type="radio" name="rating" value="star-5" onclick="showButton()" />
                     <label for="star-5" title="5 stars"><i class="fa fa-star"></i></label>
 
-                    <input id="star-4" type="radio" name="rating" value="star-4" onclick="openButton()" />
+                    <input id="star-4" type="radio" name="rating" value="star-4" onclick="showButton()" />
                     <label for="star-4" title="4 stars"><i class="fa fa-star"></i></label>
 
-                    <input id="star-3" type="radio" name="rating" value="star-3" onclick="openButton()" />
+                    <input id="star-3" type="radio" name="rating" value="star-3" onclick="showButton()" />
                     <label for="star-3" title="3 stars"><i class="fa fa-star"></i></label>
                     
-                    <input id="star-2" type="radio" name="rating" value="star-2" onclick="openButton()" />
+                    <input id="star-2" type="radio" name="rating" value="star-2" onclick="showButton()" />
                     <label for="star-2" title="2 stars"><i class="fa fa-star"></i></label>
 
-                    <input id="star-1" type="radio" name="rating" value="star-1" onclick="openButton()" />
+                    <input id="star-1" type="radio" name="rating" value="star-1" onclick="showButton()" />
                     <label for="star-1" title="1 star"><i class="fa fa-star"></i></label>
                 </div>
-                
-                <button id="submit-feedback" onclick="submitFeedback()">Submit Feedback</button>
+                <div class="feedback-buttons">
+                    <button id="submit-feedback" onclick="submitFeedback()">Submit Feedback</button>
+                    <button id="cancel-feedback" onclick="cancelFeedback()">Cancel Feedback</button>
+                </div>
             </div>
         </div>
-
     </div>
 </body>
 </html>
