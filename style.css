@@ -487,4 +487,42 @@ option {
     #edit-task {
         width: 80%;
     }
+
+    /* Add New Task Submit Button */
+    #btnSubmit{
+        margin: auto;
+        display: block;
+        padding: 2px;
+        text-align: center;
+        font-size: 1.1em;
+        width: 60%;
+        cursor: pointer;
+        border: none;
+        border-radius: 10px;
+    }
+
+    /* Add Task From Modal Submit Button */
+    #btnSubmit1 {
+        margin: auto;
+        display: block;
+        padding: 2px;
+        text-align: center;
+        font-size: 1.1em;
+        width: 40%;
+        height: 50px;
+        cursor: pointer;
+        border: none;
+        border-radius: 10px;
+    }
+
+    /* Submit Edit Task From Modal Submit Button */
+    #editModalTask {
+        padding: 2px;
+        text-align: center;
+        font-size: 1.1em;
+        width: 25%;
+        cursor: pointer;
+        border: none;
+        border-radius: 10px;
+    }
 }
