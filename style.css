@@ -1,5 +1,6 @@
 body {
     background-color: #FFDEAD;
+    font-family: "Lato";
 }
 
 .container {
@@ -12,8 +13,14 @@ body {
     border-radius: 30px;
 }
 
-h1 {
+h1, h2 {
     text-align: center;
+    font-family: "Old Standard TT";
+}
+
+h3 {
+    text-transform: uppercase;
+    font-family: "Old Standard TT";
 }
 
 hr {
