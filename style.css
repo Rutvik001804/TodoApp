@@ -470,6 +470,19 @@ option {
         margin-top: 3px;  
     }
 
+    /* Filter Task Dropdown Menu */
+    #filter-task{
+        margin-top: 5px;
+        width: 80%;
+        outline: 0;
+        border: 0;
+    }
+
+    /* For Filter Dropdown Menu */
+    .select, .select1 {
+        width: 13em;
+    }
+
     /* Input Tag for Add New Task */
     #new-task {
         width: 65%;
@@ -524,5 +537,26 @@ option {
         cursor: pointer;
         border: none;
         border-radius: 10px;
+    }
+
+    /* div tag for Search and Filter */
+    .search-and-filter{
+        margin-left: 10px;
+        margin-right: 10px;
+        margin-top: 10px;
+    }
+
+    /* For Searchbar */
+    .icon-search {
+        position: relative;
+        align-content: center;
+    }
+    
+    /* For Search Icon */
+    .icon-srch { 
+        position: absolute; 
+        left: 10px;
+        top: 8px; 
+        font-size: 1.3em;
     }
 }
