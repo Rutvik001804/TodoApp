@@ -20,8 +20,8 @@ hr {
     border: 1px solid black;
 }
 
-/* Add New Task, Add Task From Modal Submit Button */
-#btnSubmit, #btnSubmit1 {
+/* Add New Task, Add Task From Modal and Submit Edit Task From Modal Submit Button */
+#btnSubmit, #btnSubmit1, #editModalTask {
     margin: auto;
     display: block;
     padding: 2px;
@@ -35,6 +35,12 @@ hr {
     background-color: #497BE8;
 }
 
+/* Add Task From Modal and Submit Edit Task From Modal Submit Button */
+#btnSubmit1, #editModalTask {
+    width: 30%;
+    background-color: #fff;
+}
+
 /* Add Task From Modal Submit Button */
 #btnSubmit1 {
     width: 30%;
@@ -42,6 +48,12 @@ hr {
 }
 
 #btnSubmit:active, #btnSubmit1:active {
+    background-color: #497BE8;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+}
+
+#editModalTask:active {
     background-color: #497BE8;
     box-shadow: 0 5px #666;
     transform: translateY(4px);
@@ -84,8 +96,8 @@ hr {
     overflow: auto;
 }
 
-/* Add New Task Modal */
-.modal1 {
+/* Edit Task Modal, Add New Task Modal */
+.modal, .modal1 {
     display: none;
     position: fixed;
     z-index: 1;
@@ -99,8 +111,8 @@ hr {
     background-color: rgba(0,0,0,0.4);
 }
 
-/* Add New Task Content */
-.modal-content1 {
+/* Edit Task Modal Content, Add New Task Content */
+.modal-content, .modal-content1 {
     position: relative;
     background-color: #fefefe;
     margin: auto;
@@ -125,35 +137,35 @@ hr {
     to {top:0; opacity:1}
 }
 
-/* Close Button for Add New Task */
-.close1 {
+/* Close Button for Edit Task and Add New Task */
+.close, .close1 {
     color: white;
     float: right;
     font-size: 28px;
     font-weight: bold;
 }
   
-.close1:hover, .close1:focus {
+.close:hover, .close:focus, .close1:hover, .close1:focus {
     color: #000;
     text-decoration: none;
     cursor: pointer;
 }
 
-/* Modal Header for Add New Task */
-.modal-header1 {
+/* Modal Header for Edit Task and Add New Task */
+.modal-header, .modal-header1 {
     padding: 2px 16px;
     background-color: #497BE8;
     color: black;
     border-radius: 20px 20px 0px 0px;
 }
   
-/* Modal Body for Add New Task */
-.modal-body1 {
+/* Modal Body for Edit Task and Add New Task */
+.modal-body, .modal-body1 {
     padding: 2px 16px;
 }
 
-/* Modal Footer for Add New Task */
-.modal-footer1 {
+/* Modal Footer for Edit Task and Add New Task */
+.modal-footer, .modal-footer1 {
     background-color: #497BE8;
     color: black;
     border-radius: 0px 0px 20px 20px;
@@ -165,6 +177,20 @@ hr {
 #add-newtitle {
     display: flex;
     flex-direction: row;
+}
+
+/* Title for Edit Task Modal */
+#edit-title {
+    width: 600px;
+    display: flex;
+    flex-direction: row;
+}
+
+/* Task for Edit Task Modal */
+#edit-task {
+    width: 50%;
+    border-radius: 3px;
+    font-size: 1em;
 }
 
 /* For select tag */
@@ -185,16 +211,20 @@ select::-ms-expand {
     display: none;
 }
 
-/* Add New Task Dropdown Menu */
-.select1 {
+/* For Filter Dropdown Menu and Add New Task Dropdown Menu */
+.select, .select1 {
     position: relative;
     display: flex;
-    width: 12em;
+    width: 10em;
     height: 2em;
     background: #497BE8;
     font-size: 1.05em;
     border-radius: 10px;
     overflow: hidden;
+}
+
+.select1 {
+    width: 12em;
     margin-top: 10px;
     margin-left: 5px;
 }
@@ -204,7 +234,7 @@ option {
     background: #fff;
 }
 
-.select1::after {
+.select::after, .select1::after {
     content: '\25BC';
     position: absolute;
     top: 0;
@@ -216,12 +246,12 @@ option {
     pointer-events: none;
 }
 
-.select1:hover::after {
+.select:hover::after, .select1:hover::after {
     color: #f39c12;
 }
 
-/* Add Task Dropdown Menu */
-#new-title {
+/* Add Task and Edit Task Dropdown Menu */
+#new-title, #edit-newtitle {
     width: 40%;
     padding: 2px;
     border: 0;
@@ -244,7 +274,20 @@ option {
     margin-left: 5px;
 }
 
-/* Valiation Message for Add New Task Tile, Task Modal*/
-#validation_error_title1, #validation_error_task1 {
+/* Edit Task From Modal */
+#edit-newtask {
+    width: 71%;
+    padding: 2px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    font-size: 1em;
+    margin-bottom: 3px;
+    outline: 0;
+    border-width: 0 0 2px;
+    border-color: #497BE8;
+}
+
+/* Validation Message for Edit Task Title, Task Modal and Valiation Message for Add New Task Tile, Task Modal*/
+#validation_error_title, #validation_error_task, #validation_error_title1, #validation_error_task1 {
     color: red;
 }

@@ -247,9 +247,92 @@ function incompletedTask(ele) {
     
     todo.push(completedTodo[last[1]]);
     completedTodo.splice(last[1],1);
-    
+
     display(this.todo, this.completedTodo);
     
     console.log("Task Back To Go Todo");
     console.log(completedTodo);
+}
+
+document.getElementById('myForm').onsubmit = () => {
+    editmyTask();
+    return false;
+};
+
+// Open Modal and Send Data To Modal For Particular Task
+function editTask(ele) {
+    document.getElementById('edit-newtask').focus();
+
+    var index = document.getElementById(ele.id);
+    index = index.id;
+    var last = index.toString().split('btnEdit', 2);
+
+    var modal = document.getElementById("myModal");
+
+    var span = document.getElementsByClassName("close")[0];
+
+    modal.style.display = "block";
+
+    var e = document.getElementById('edit-task');
+
+    var inp1 = document.getElementById('edit-newtask');
+    inp1.value = todo[last[1]][1];
+
+    var inp2 = document.createElement("input");
+    inp2.setAttribute("type", "hidden");
+    inp2.setAttribute("id", "editValue");
+    inp2.setAttribute("value", last[1]);
+
+    e.appendChild(inp2);
+
+    span.onclick = () => {
+        modal.style.display = "none";
+    }
+
+    window.onclick = (event) => {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+    }
+    
+    document.addEventListener('keydown', (event) => {
+        if (event.key === 'Escape') {
+            modal.style.display = "none";
+        }
+    });
+    
+    console.log("Task Go To Edit");
+}
+
+// For Edit Task
+function editmyTask() {
+    var modal = document.getElementById("myModal");
+    modal.style.display = "block";
+    
+    var validate_title = document.getElementById('validation_error_title');
+    var validate_task = document.getElementById('validation_error_task');
+
+    var inp = document.getElementById('new-task');
+    inp.style.width = ((inp.getAttribute('placeholder').length + 1) * 10) + 'px';
+
+    validate_title.innerHTML = '';
+    validate_task.innerHTML = '';
+
+    if(document.getElementById("edit-newtitle").value == '') {
+        modal.style.display = "block";
+        validate_title.innerHTML = "Please select title";
+    }
+    if(document.getElementById("edit-newtask").value.trim().length == 0) {
+        modal.style.display = "block";
+        validate_task.innerHTML = "Please write task to edit todo";
+    }
+    if(document.getElementById("edit-newtitle").value != '' && document.getElementById("edit-newtask").value.trim().length != 0) {
+        var arrId = document.getElementById("editValue").value;
+        todo[arrId][0] = document.getElementById("edit-newtitle").value;
+        todo[arrId][1] = document.getElementById("edit-newtask").value;
+
+        display(this.todo, this.completedTodo);
+        modal.style.display = "none";
+    }
+    document.getElementById('edit-newtask').focus();
 }

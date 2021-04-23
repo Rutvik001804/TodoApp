@@ -69,6 +69,39 @@
             
         </div>
 
+        <!-- Edit Task Modal -->
+        <div id="myModal" class="modal">
+            <div class="modal-content">
+                <div class="modal-header">
+                  <span class="close">&times;</span>
+                  <h2>Edit Task</h2>
+                </div>
+                <div class="modal-body">
+                  <form id="myForm" onsubmit="editTask(); return false;">
+                    <div id="edit-title">
+                        <p>Title : </p>
+                        <div class="select1">
+                            <select id="edit-newtitle">
+                                <option value="" disabled selected>Select Your Option</option>
+                                <option value="Shopping List">Shopping List</option>
+                                <option value="Office Work">Office Work</option>
+                                <option value="Other">Other</option>
+                            </select>
+                        </div>
+                    </div>
+                    <p id="validation_error_title"></p>
+                    <p id="edit-task"> Task :
+                        <input id="edit-newtask" type="text" placeholder="Edit Task Here" onkeypress="check(this)">
+                    </p>
+                    <p id="validation_error_task"></p>
+                  </form>
+                </div>
+                <div class="modal-footer">
+                  <input type="button" id="editModalTask" value="Submit" onclick="editmyTask()">
+                </div>
+              </div>
+        </div>
+
     </div>
 </body>
 </html>
