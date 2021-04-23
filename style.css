@@ -459,4 +459,14 @@ option {
         background-color: #FFFAFA;
         padding: 10px;
     }
+
+    /* Add Task and Filter Task Dropdown Menu */
+    #new-title, #filter-task {
+        width: 65%;
+        padding: 2px;
+        border: 1px solid #ccc;
+        border-radius: 3px;
+        font-size: 1.1em;
+        margin-top: 3px;  
+    }
 }
