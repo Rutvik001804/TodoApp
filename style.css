@@ -593,4 +593,15 @@ option {
     .delete, .completed, .incompleted, .edit {
         font-size: 2em;
     }
+
+    /* Rating and Button */
+    .rating-and-button {
+        display: inline;
+    }
+
+    /* Submit and Cancel Button for Feedback */
+    #submit-feedback, #cancel-feedback {
+        margin-left: 40px;
+        width: 30%;
+    }
 }
