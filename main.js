@@ -253,6 +253,11 @@ function addTask() {
 
         var a = document.getElementById('toast');
         
+        a.className = 'show';
+        setTimeout(() => { 
+            a.className = a.className.replace('show','');
+        }, 3000);
+        a.innerHTML = "Task Added Successfully";
         display(this.todo, this.completedTodo);
 
         document.getElementById('new-title').value = '';
@@ -272,6 +277,13 @@ function deleteTask(dlt) {
     
     todo.splice(last[1],1);
 
+    var a = document.getElementById('toast');
+    a.className = 'show';
+    setTimeout(() => {
+        a.className = a.className.replace('show','');
+    }, 3000);
+    a.innerHTML = "Task Deleted Successfully";
+
     display(this.todo, this.completedTodo);
     
     document.getElementById("filter-task").selectedIndex = 0;
@@ -288,6 +300,13 @@ function completedTask(ele) {
     completedTodo.push(todo[last[1]]);
     todo.splice(last[1],1);
 
+    var a = document.getElementById('toast');    
+    a.className = 'show';
+    setTimeout(() => { 
+        a.className = a.className.replace('show','');
+    }, 3000);
+    a.innerHTML = "Task Completed Successfully";
+
     display(this.todo, this.completedTodo);
     
     console.log("Task Go To Completed");
@@ -301,8 +320,17 @@ function removeTask(dlt) {
     var last = index.toString().split('deleteBtn', 2);
     
     completedTodo.splice(last[1],1);
+    
+    var a = document.getElementById('toast');    
+    a.className = 'show';
+    setTimeout(() => { 
+        a.className = a.className.replace('show','');
+    }, 3000);
+    a.innerHTML = "Task Deleted Successfully";
 
     display(this.todo, this.completedTodo);
+    
+    document.getElementById("filter-task").selectedIndex = 0;
 
     console.log("Task Permanently Deleted From Completed Task");
     console.log(completedTodo);
@@ -316,6 +344,13 @@ function incompletedTask(ele) {
     
     todo.push(completedTodo[last[1]]);
     completedTodo.splice(last[1],1);
+    
+    var a = document.getElementById('toast');    
+    a.className = 'show';
+    setTimeout(() => { 
+        a.className = a.className.replace('show','');
+    }, 3000);
+    a.innerHTML = "Task Back Todo Successfully";
 
     display(this.todo, this.completedTodo);
     
@@ -400,6 +435,12 @@ function editmyTask() {
         todo[arrId][0] = document.getElementById("edit-newtitle").value;
         todo[arrId][1] = document.getElementById("edit-newtask").value;
 
+        var a = document.getElementById('toast');
+        a.className = 'show';
+        setTimeout(() => { 
+            a.className = a.className.replace('show','');
+        }, 3000);
+        a.innerHTML = "Task Edited Successfully";
         display(this.todo, this.completedTodo);
         modal.style.display = "none";
     }
