@@ -430,7 +430,7 @@ function editmyTask() {
     if(document.getElementById("edit-newtitle").value != '' && document.getElementById("edit-newtask").value.trim().length != 0) {
         var arrId = document.getElementById("editValue").value;
         todo[arrId][0] = document.getElementById("edit-newtitle").value;
-        todo[arrId][1] = document.getElementById("edit-newtask").value;
+        todo[arrId][1] = document.getElementById("edit-newtask").value.trim();
 
         var a = document.getElementById('toast');
         a.className = 'show';
