@@ -581,4 +581,11 @@ option {
     .modal-content, .modal-content1 {
         width: 80%;
     }
+
+    /* div tag for particular Todo Task, div tag for particular Completed Task */
+    .info-todo, .info-completed {
+        margin-bottom: 5px;
+        padding: 10px;
+        border-radius: 10px;
+    }
 }
