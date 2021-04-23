@@ -48,12 +48,6 @@ hr {
     background-color: #fff;
 }
 
-/* Add Task From Modal Submit Button */
-#btnSubmit1 {
-    width: 30%;
-    background-color: #fff;
-}
-
 #btnSubmit:active, #btnSubmit1:active {
     background-color: #497BE8;
     box-shadow: 0 5px #666;
@@ -101,6 +95,10 @@ hr {
     align-items: center;
     font-size: 1.2em;
     overflow: auto;
+}
+
+.no-todo-task, .no-completed-task {
+    color: red;
 }
 
 /* div tag for Search and Filter */
@@ -350,7 +348,7 @@ option {
 
 /* Message for when do data available in Todo Task, Completed Task using Searchbar and
    Message for when do data available in Todo Task, Completed Task using Filter */
-   #search-todo-msg, #search-completed-msg, #filter-todo-msg, #filter-completed-msg {
+#search-todo-msg, #search-completed-msg, #filter-todo-msg, #filter-completed-msg {
     font-size: 1.1em;
     text-align: center;
     display: none;
